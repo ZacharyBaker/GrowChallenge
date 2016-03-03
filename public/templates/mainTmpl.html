@@ -1,15 +1,16 @@
-<br>
+<div class="wrapper">
 
 
-<select class="dropdown" ng-model="key">
-	<option value="">State</option>
-	<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
-</select>
+	<select class="dropdown" ng-model="key">
+		<option value="">State</option>
+		<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
+	</select>
 
 
 
 
-<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
-<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
+	<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
+	<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
 
-<br/>
+
+</div>

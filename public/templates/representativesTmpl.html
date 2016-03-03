@@ -1,37 +1,55 @@
-WHO ARE MY REPRESENTATIVES
+<div class="wrapper">
 
-<br>
-<div>
-	<select class="dropdown" ng-model="key">
-		<option>{{stateVal}}</option>
-		<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
-	</select>
+	<h3 class="whoIsMy">Who's My Representative?</h3>
+
+	
+	<div class="navBar">
+		<select class="dropdown" ng-model="key">
+			<option>{{stateVal}}</option>
+			<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
+		</select>
 
 
 
 
-	<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
-	<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
-</div>
-<div class="leftBox">
-	List / Representatives
+		<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
+		<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
+	</div>
+	<div class="leftBox">
+		<span class="list">List / <span class="blue">Representatives</span></span>
 
-	<div ng-repeat="rep in representatives" ng-click="changeInfo(rep)">
 
-		{{rep.name}}
-		<br> {{rep.party}}
+		<table>
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Party</td>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr ng-click="changeInfo(rep)" ng-repeat="rep in representatives">
+				<td>{{rep.name}}</td>
+				<td>{{rep.party}}</td>
+			</tr>
+		</tbody>
+	</table>
+		
+	</div>
+
+	<div class="infoBox">
+
+		<span class="list">Info</span>
+
+		<div>{{infoBox.first}}</div>
+		<div>{{infoBox.last}}</div>
+		<div>{{infoBox.district}}</div>
+		<div>{{infoBox.phone}}</div>
+		<div>{{infoBox.office}}</div>
 
 	</div>
-</div>
+	
+	
 
-<div class="infoBox">
-
-	<h3>Info</h3>
-
-	<div>{{infoBox.first}}</div>
-	<div>{{infoBox.last}}</div>
-	<div>{{infoBox.district}}</div>
-	<div>{{infoBox.phone}}</div>
-	<div>{{infoBox.office}}</div>
 
 </div>

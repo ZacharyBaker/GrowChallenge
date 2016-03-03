@@ -1,9 +1,74 @@
-.infoBox {
+html, body {
 	
-	float: left;
+	font-family: Helvetica;
+	font-weight: 100;
+	color: #373E44;
+	background: #EEEEEE;
+}
+
+.wrapper {
+	width: 60%;
+	background: white;
+	height: 700px;
+	margin: 50px auto;
+	border: 1px solid #D1D1D1;
 	
 }
 
 .leftBox {
 	float: left;
+	width: 55%;
+	margin-left: 35px;
+}
+
+
+.infoBox {
+	float: left;
+	width: 40%;	
+}
+
+.whoIsMy {
+	color: #17A7E9;
+	font-size: 20px;
+	margin-top: 70px;
+	margin-left: 35px;
+}
+
+.navBar {
+	margin-left: 35px;
+}
+
+.list {
+	font-size: 20px;
+}
+
+.blue {
+	color: #31AAEB;
+}
+
+.nameAndParty {
+	position: relative;
+	border: 1px solid red;
+}
+
+.party {
+	position: absolute;
+	right: 50px;
+}
+.partyP {
+	position: absolute;
+	right: 75px;
+}
+
+.listOfPeople {
+	border: 1px solid red;
+	position: relative;
+}
+
+table {
+	width: 100%;
+}
+
+thead tr{
+	background: #F8F8F9;
 }

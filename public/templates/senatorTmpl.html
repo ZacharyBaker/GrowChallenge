@@ -1,37 +1,43 @@
-WHO ARE MY SENATORS????
+<div class="wrapper">
 
-<br>
-<div>
-	<select class="dropdown" ng-model="key">
-		<option>{{stateVal}}</option>
-		<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
-	</select>
+	<h3 class="whoIsMy">Who's My Senator?</h3>
 
-
-	<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
-	<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
-</div>
-<div class="leftBox">
-	List / Senators
+	
+	<div class="navBar">
+		<select class="dropdown" ng-model="key">
+			<option>{{stateVal}}</option>
+			<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
+		</select>
 
 
-	<div ng-repeat="senator in senators" ng-click="changeInfo(senator)">
+		<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
+		<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
+	</div>
+	<div class="leftBox">
+		<span class="list">List / <span class="blue">Senators</span></span>
 
-		{{senator.name}}
-		<br>
-		{{senator.party}}
+
+		<div class="nameAndParty">Name <span class="party">Party</span></div>
+
+
+
+		<div class="listOfPeople" ng-repeat="senator in senators" ng-click="changeInfo(senator)">
+
+			{{senator.name}} <span class="partyP">{{senator.party}}</span>
+
+		</div>
+	</div>
+	<div class="infoBox">
+
+		<span class="list">Info</span>
+
+		<div>{{infoBox.first}}</div>
+		<div>{{infoBox.last}}</div>
+		<div>{{infoBox.district}}</div>
+		<div>{{infoBox.phone}}</div>
+		<div>{{infoBox.office}}</div>
 
 	</div>
-</div>
 
-<div class="infoBox">
-
-	<h3>Info</h3>
-
-	<div>{{infoBox.first}}</div>
-	<div>{{infoBox.last}}</div>
-	<div>{{infoBox.district}}</div>
-	<div>{{infoBox.phone}}</div>
-	<div>{{infoBox.office}}</div>
 
 </div>
