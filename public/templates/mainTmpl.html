@@ -1,16 +1,21 @@
 <div class="wrapper">
+	<h2 class="zach">ZACHARY BAKER :)</h2>
+	<h3 class="whoIsMy">Grow Coding Challenge</h3>
 
 
-	<select class="dropdown" ng-model="key">
-		<option value="">State</option>
-		<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
-	</select>
+	<div class="navBar">
 
+		<select class="dropdown" ng-model="key">
+			<option value="">State</option>
+			<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
+		</select>
 
+		<button ng-show="key"><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
+		<button ng-show="key"><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
 
+	</div>
 
-	<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
-	<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
+	<p class="please">Please chooose a state.</p>
 
 
 </div>

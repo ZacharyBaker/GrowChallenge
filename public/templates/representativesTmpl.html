@@ -2,7 +2,7 @@
 
 	<h3 class="whoIsMy">Who's My Representative?</h3>
 
-	
+
 	<div class="navBar">
 		<select class="dropdown" ng-model="key">
 			<option>{{stateVal}}</option>
@@ -20,36 +20,33 @@
 
 
 		<table>
-		<thead>
-			<tr>
-				<td id="leftSide">Name</td>
-				<td>Party</td>
-			</tr>
-		</thead>
-		
-		<tbody>
-			<tr ng-click="changeInfo(rep)" ng-repeat="rep in representatives">
-				<td class="borderBot" id="leftSide">{{rep.name}}</td>
-				<td>{{rep.party}}</td>
-			</tr>
-		</tbody>
-	</table>
-		
+			<thead>
+				<tr>
+					<td id="leftSide">Name</td>
+					<td>Party</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr ng-click="changeInfo(rep)" ng-repeat="rep in representatives">
+					<td class="borderBot" id="leftSide">{{rep.name}}</td>
+					<td>{{rep.party}}</td>
+				</tr>
+			</tbody>
+		</table>
+
 	</div>
 
 	<div class="infoBox">
 
 		<span class="list">Info</span>
-		
+
 		<div class="infoSpacing">{{infoBox.first}}</div>
 		<div class="infoSpacing">{{infoBox.last}}</div>
 		<div class="infoSpacing">{{infoBox.district}}</div>
 		<div class="infoSpacing">{{infoBox.phone}}</div>
 		<div class="infoSpacing">{{infoBox.office}}</div>
 
-	
-	
-	
 
-
+	</div>
 </div>

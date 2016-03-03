@@ -1,7 +1,7 @@
 angular.module('app')
 
-	.controller('repCtrl', ['$scope', '$state', '$stateParams', 'mainService',
-		function ($scope, $state, $stateParams, mainService) {
+	.controller('repCtrl', ['$scope', '$stateParams', 'mainService',
+		function ($scope, $stateParams, mainService) {
 
 			$scope.infoBox = {
 				first: "First Name",
@@ -11,6 +11,19 @@ angular.module('app')
 				office: "Office"
 			}
 			
+			$scope.changeInfo = function (rep) {
+				var senName = rep.name.split(' ');
+				rep.first = senName[0];
+				rep.last = senName[1];
+
+				$scope.infoBox = {
+					first: rep.first,
+					last: rep.last,
+					district: rep.district,
+					phone: rep.phone,
+					office: rep.office
+				}
+			}
 			
 			$scope.getRepresentatives = function () {
 
@@ -22,9 +35,6 @@ angular.module('app')
 			}
 
 			$scope.getRepresentatives();
-
-
-
 
 
 			$scope.states = {
@@ -96,18 +106,5 @@ angular.module('app')
 			}
 			$scope.findValue();
 			
-			$scope.changeInfo = function (rep) {
-				var senName = rep.name.split(' ');
-				rep.first = senName[0];
-				rep.last = senName[1];
-
-				$scope.infoBox = {
-					first: rep.first,
-					last: rep.last,
-					district: rep.district,
-					phone: rep.phone,
-					office: rep.office
-				}
-			}
 
 		}])

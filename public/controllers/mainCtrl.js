@@ -1,15 +1,7 @@
 angular.module('app')
 
-	.controller('mainCtrl', ['$scope', '$stateParams', '$state', 'mainService',
-		function ($scope, $stateParams, $state, mainService) {
-
-			$scope.dude = "hey im a dude."
-
-
-
-
-
-
+	.controller('mainCtrl', ['$scope', '$stateParams',
+		function ($scope, $stateParams) {
 
 			$scope.states = {
 				"AL": "Alabama",

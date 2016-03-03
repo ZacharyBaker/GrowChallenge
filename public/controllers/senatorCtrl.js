@@ -1,7 +1,7 @@
 angular.module('app')
 
-	.controller('senatorCtrl', ['$scope', '$state', '$stateParams', 'mainService',
-		function ($scope, $state, $stateParams, mainService) {
+	.controller('senatorCtrl', ['$scope', '$stateParams', 'mainService',
+		function ($scope, $stateParams, mainService) {
 
 			$scope.infoBox = {
 				first: "First Name",
@@ -11,6 +11,19 @@ angular.module('app')
 				office: "Office"
 			}
 
+			$scope.changeInfo = function (senator) {
+				var senName = senator.name.split(' ');
+				senator.first = senName[0];
+				senator.last = senName[1];
+
+				$scope.infoBox = {
+					first: senator.first,
+					last: senator.last,
+					district: senator.district,
+					phone: senator.phone,
+					office: senator.office
+				}
+			}
 
 			$scope.getSenators = function () {
 
@@ -96,19 +109,6 @@ angular.module('app')
 			}
 			$scope.findValue();
 
-			$scope.changeInfo = function (senator) {
-				var senName = senator.name.split(' ');
-				senator.first = senName[0];
-				senator.last = senName[1];
-
-				$scope.infoBox = {
-					first: senator.first,
-					last: senator.last,
-					district: senator.district,
-					phone: senator.phone,
-					office: senator.office
-				}
-			}
 
 
 		}])
