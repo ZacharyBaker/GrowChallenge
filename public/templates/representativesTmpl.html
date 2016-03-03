@@ -1,7 +1,37 @@
 WHO ARE MY REPRESENTATIVES
 
-<div ng-repeat="rep in representatives">
-	
-	{{rep.name}}
-	
+<br>
+<div>
+	<select class="dropdown" ng-model="key">
+		<option>{{stateVal}}</option>
+		<option value="{{key}}" ng-repeat="(key, value) in states">{{value}}</option>
+	</select>
+
+
+
+
+	<button><a href="http://127.0.0.1:8080/public/#/representatives/{{key}}">Representatives</a></button>
+	<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
+</div>
+<div class="leftBox">
+	List / Representatives
+
+	<div ng-repeat="rep in representatives" ng-click="changeInfo(rep)">
+
+		{{rep.name}}
+		<br> {{rep.party}}
+
+	</div>
+</div>
+
+<div class="infoBox">
+
+	<h3>Info</h3>
+
+	<div>{{infoBox.first}}</div>
+	<div>{{infoBox.last}}</div>
+	<div>{{infoBox.district}}</div>
+	<div>{{infoBox.phone}}</div>
+	<div>{{infoBox.office}}</div>
+
 </div>
