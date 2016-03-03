@@ -2,7 +2,7 @@
 
 	<h3 class="whoIsMy">Who's My Senator?</h3>
 
-	
+
 	<div class="navBar">
 		<select class="dropdown" ng-model="key">
 			<option>{{stateVal}}</option>
@@ -14,28 +14,34 @@
 		<button><a href="http://127.0.0.1:8080/public/#/senators/{{key}}" +>Senators</a></button>
 	</div>
 	<div class="leftBox">
-		<span class="list">List / <span class="blue">Senators</span></span>
+		<span class="list">List  /  <span class="blue">Senators</span></span>
 
 
-		<div class="nameAndParty">Name <span class="party">Party</span></div>
+		<table>
+			<thead>
+				<tr>
+					<td id="leftSide">Name</td>
+					<td>Party</td>
+				</tr>
+			</thead>
 
-
-
-		<div class="listOfPeople" ng-repeat="senator in senators" ng-click="changeInfo(senator)">
-
-			{{senator.name}} <span class="partyP">{{senator.party}}</span>
-
-		</div>
+			<tbody>
+				<tr ng-click="changeInfo(senator)" ng-repeat="senator in senators">
+					<td class="borderBot" id="leftSide">{{senator.name}}</td>
+					<td>{{senator.party}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 	<div class="infoBox">
 
 		<span class="list">Info</span>
 
-		<div>{{infoBox.first}}</div>
-		<div>{{infoBox.last}}</div>
-		<div>{{infoBox.district}}</div>
-		<div>{{infoBox.phone}}</div>
-		<div>{{infoBox.office}}</div>
+		<div class="infoSpacing">{{infoBox.first}}</div>
+		<div class="infoSpacing">{{infoBox.last}}</div>
+		<div class="infoSpacing">{{infoBox.district}}</div>
+		<div class="infoSpacing">{{infoBox.phone}}</div>
+		<div class="infoSpacing">{{infoBox.office}}</div>
 
 	</div>
 
