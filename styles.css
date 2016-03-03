@@ -77,6 +77,10 @@ tr td {
 	padding-bottom:10px;
 }
 
+tbody tr {
+	cursor: pointer;
+}
+
 #leftSide {
 	padding-left: 10px;
 }
