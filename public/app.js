@@ -12,6 +12,6 @@ angular.module('app', ['ui.router'])
 
 
 		$urlRouterProvider
-			.otherwise('/login');
+			.otherwise('/main');
 	})
 
