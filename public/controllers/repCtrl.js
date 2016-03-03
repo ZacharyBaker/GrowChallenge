@@ -4,6 +4,7 @@ angular.module('app')
 		function ($scope, $state, $stateParams, mainService) {
 
 			$scope.getRepresentatives = function () {
+				console.log('stateparams.state', $stateParams.state);
            
 		   mainService.getRepresentatives($stateParams.state).then(function(response){
 			console.log('THIS IS MAIN CONTROLLER', response);
