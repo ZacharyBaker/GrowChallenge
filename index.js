@@ -44,7 +44,7 @@ function jsonResponse(req, res, next) {
   return res.json(res.locals);
 }
 
-server = app.listen(3000, function() {
+server = app.listen(5000, function() {
   var host = server.address().address,
       port = server.address().port;
 
