@@ -1,7 +1,11 @@
 var express = require('express'),
     request = require('request'),
     app     = express(),
+	cors = require('cors'),
     server;
+
+app.use(cors());
+
 
 app.get('/representatives/:state',
   findRepresentativesByState,

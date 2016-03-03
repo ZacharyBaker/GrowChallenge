@@ -9,6 +9,17 @@ angular.module('app', ['ui.router'])
 				controller: 'mainCtrl'
 			})
 
+			.state('senators', {
+				url: '/senators/:state',
+				templateUrl: './templates/senatorTmpl.html',
+				controller: 'senatorCtrl'
+			})
+			
+			.state('representatives', {
+				url: '/representatives/:state',
+				templateUrl: './templates/representativesTmpl.html',
+				controller: 'repCtrl'
+			})
 
 
 		$urlRouterProvider
